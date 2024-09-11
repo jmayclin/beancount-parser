@@ -268,7 +268,6 @@ impl<D> FromIterator<Entry<D>> for BeancountFile<D> {
 /// }
 /// ```
 #[derive(Debug, Clone, PartialEq)]
-#[non_exhaustive]
 pub struct Directive<D> {
     /// Date of the directive
     pub date: Date,
@@ -295,7 +294,6 @@ impl<D: Decimal> FromStr for Directive<D> {
 /// Directive specific content
 #[allow(missing_docs)]
 #[derive(Debug, Clone, PartialEq)]
-#[non_exhaustive]
 pub enum DirectiveContent<D> {
     Transaction(Transaction<D>),
     Price(Price<D>),

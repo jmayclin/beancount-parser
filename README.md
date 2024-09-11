@@ -1,3 +1,9 @@
+# Why Fork?
+
+Not intended to be a permanent fork, but for now the stability endeavors of beancount seem to be coming at too high a price for me. Specificially I want to be able to directly construct most of the types, but most have no public constructor and are maked non-exhaustive which prevents me from initializing them. 
+
+I was in the process of transmuting arrays to the structs when I realized this was probably the saner approach.
+
 # beancount-parser
 
 [![License](https://img.shields.io/crates/l/beancount-parser)](#Unlicense)

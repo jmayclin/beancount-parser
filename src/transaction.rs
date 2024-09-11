@@ -43,7 +43,6 @@ use crate::{
 /// assert_eq!(trx.postings.len(), 2);
 /// ```
 #[derive(Debug, Clone, PartialEq)]
-#[non_exhaustive]
 pub struct Transaction<D> {
     /// Transaction flag (`*` or `!` or `None` when using the `txn` keyword)
     pub flag: Option<char>,
@@ -87,7 +86,6 @@ pub struct Transaction<D> {
 /// assert_eq!(price.currency.as_str(), "EUR");
 /// ```
 #[derive(Debug, Clone, PartialEq)]
-#[non_exhaustive]
 pub struct Posting<D> {
     /// Transaction flag (`*` or `!` or `None` when absent)
     pub flag: Option<char>,
@@ -107,7 +105,6 @@ pub struct Posting<D> {
 ///
 /// It is the amount within `{` and `}`.
 #[derive(Debug, Default, Clone, PartialEq)]
-#[non_exhaustive]
 pub struct Cost<D> {
     /// Cost basis of the posting
     pub amount: Option<Amount<D>>,
