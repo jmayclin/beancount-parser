@@ -57,7 +57,7 @@ pub struct Amount<D> {
 ///
 /// For an example, look at the [`Price`] directive
 #[derive(Debug, Clone, PartialOrd, Ord, PartialEq, Eq, Hash)]
-pub struct Currency(Arc<str>);
+pub struct Currency(pub Arc<str>);
 
 impl Currency {
     /// Returns underlying string representation
